@@ -1,0 +1,93 @@
+/** @format */
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.box {
+  width: 500px;
+  padding: 200px 0;
+  margin: 0 auto;
+}
+
+.burger {
+  appearance: none;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: tan;
+  cursor: pointer;
+}
+
+.btn-icon {
+  position: relative;
+}
+
+.btn-icon::after,
+.btn-icon::before {
+  content: "";
+  position: absolute;
+}
+
+.btn-icon,
+.btn-icon::after,
+.btn-icon::before {
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.btn-icon::after {
+  top: -8px;
+}
+
+.btn-icon::before {
+  top: 8px;
+}
+
+.burger:checked + .btn .btn-icon {
+  background-color: transparent;
+}
+
+.burger:checked + .btn .btn-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger:checked + .btn .btn-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
